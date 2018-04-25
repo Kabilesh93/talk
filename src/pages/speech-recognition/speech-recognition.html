@@ -1,0 +1,79 @@
+<!--
+  Generated template for the TextToSpeechPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-toolbar color="primary">
+      <ion-title>Speech Recognition</ion-title>
+      <button ion-button menuToggle end (click)="openMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button> 
+    </ion-toolbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+
+    <ion-grid id="button_grid">
+
+      <ion-row>
+        <ion-col width-50 style="text-align: right">
+          <button ion-button color="danger" icon-end (click)='startListening();'>
+            Start
+            <ion-icon name="mic"></ion-icon>
+          </button>  
+        </ion-col>
+        <ion-col width-50 style="text-align: left">
+          <button ion-button color="danger" icon-end (click)='stopListening();'>
+            Stop
+            <ion-icon name="mic-off"></ion-icon>
+          </button>  
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-card>
+      <ion-card-header>This is what I understood...</ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let match of matches">
+            {{ match }}
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-grid>
+      <ion-row>
+        
+        <ion-col col-6>
+          <button ion-button color="secondary" outline>
+            <ion-icon name="play"></ion-icon>
+          </button>
+        </ion-col>
+  
+        <ion-col col-6>
+          <button ion-button color="secondary" outline>
+            <ion-icon name="bookmark"></ion-icon>
+          </button>
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  
+    <ion-fab right bottom>
+      <button ion-fab mini color="danger"><ion-icon name="share-alt"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab color="dark"><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab color="dark"><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab color="dark"><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+  
+  </ion-content>

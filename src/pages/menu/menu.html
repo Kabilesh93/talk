@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+   <ion-list>
+    <ion-list-header>
+     <p id="p">Menu</p>
+    </ion-list-header>
+    <a ion-item (click)="openHelpModal()">
+      <p id="p">Recorded Audio</p>
+    </a>
+    <a ion-item (click)="openHelpModal()">
+      <p id="p">Recognized Text</p>
+    </a>
+    <a ion-item (click)="openHelpModal()">
+      <p id="p">Help</p>
+    </a>
+  </ion-list>
+</ion-content>
